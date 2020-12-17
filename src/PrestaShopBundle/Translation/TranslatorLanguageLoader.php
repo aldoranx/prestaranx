@@ -1,12 +1,13 @@
 <?php
 
 /**
- * 2007-2019 PrestaShop SA and Contributors
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
+ * that is bundled with this package in the file LICENSE.md.
  * It is also available through the world-wide-web at this URL:
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
@@ -17,12 +18,11 @@
  *
  * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
  * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://www.prestashop.com for more information.
+ * needs please refer to https://devdocs.prestashop.com/ for more information.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2019 PrestaShop SA and Contributors
+ * @author    PrestaShop SA and Contributors <contact@prestashop.com>
+ * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
- * International Registered Trademark & Property of PrestaShop SA
  */
 
 namespace PrestaShopBundle\Translation;
@@ -31,6 +31,7 @@ use PrestaShop\PrestaShop\Core\Addon\Theme\Theme;
 use PrestaShopBundle\Translation\Loader\SqlTranslationLoader;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Translation\Loader\XliffFileLoader;
+use Symfony\Component\Translation\Translator as BaseTranslatorComponent;
 use Symfony\Component\Translation\TranslatorInterface;
 
 class TranslatorLanguageLoader
@@ -44,7 +45,7 @@ class TranslatorLanguageLoader
     /**
      * TranslatorLanguageLoader constructor.
      *
-     * @param $isAdminContext
+     * @param bool $isAdminContext
      */
     public function __construct($isAdminContext)
     {
@@ -54,36 +55,43 @@ class TranslatorLanguageLoader
     /**
      * Loads a language into a translator
      *
-     * @param TranslatorInterface $translator Translator to modifiy
+     * @param TranslatorInterface $translator Translator to modify
      * @param string $locale Locale code for the language to load
      * @param bool $withDB [default=true] Whether to load translations from the database or not
      * @param Theme|null $theme [default=false] Currently active theme (Front office only)
      */
     public function loadLanguage(TranslatorInterface $translator, $locale, $withDB = true, Theme $theme = null)
     {
-        if (!$translator->isLanguageLoaded($locale)) {
-            $translator->addLoader('xlf', new XliffFileLoader());
+        if (!method_exists($translator, 'isLanguageLoaded')) {
+            return;
+        }
+        if ($translator->isLanguageLoaded($locale)) {
+            return;
+        }
+        if (!($translator instanceof BaseTranslatorComponent)) {
+            return;
+        }
+        $translator->addLoader('xlf', new XliffFileLoader());
 
-            if ($withDB) {
-                $sqlTranslationLoader = new SqlTranslationLoader();
-                if (null !== $theme) {
-                    $sqlTranslationLoader->setTheme($theme);
-                }
-                $translator->addLoader('db', $sqlTranslationLoader);
+        if ($withDB) {
+            $sqlTranslationLoader = new SqlTranslationLoader();
+            if (null !== $theme) {
+                $sqlTranslationLoader->setTheme($theme);
             }
+            $translator->addLoader('db', $sqlTranslationLoader);
+        }
 
-            $finder = Finder::create()
-                ->files()
-                ->name('*.' . $locale . '.xlf')
-                ->notName($this->isAdminContext ? '^Shop*' : '^Admin*')
-                ->in($this->getTranslationResourcesDirectories($theme));
+        $finder = Finder::create()
+            ->files()
+            ->name('*.' . $locale . '.xlf')
+            ->notName($this->isAdminContext ? '^Shop*' : '^Admin*')
+            ->in($this->getTranslationResourcesDirectories($theme));
 
-            foreach ($finder as $file) {
-                list($domain, $locale, $format) = explode('.', $file->getBasename(), 3);
-                $translator->addResource($format, $file, $locale, $domain);
-                if ($withDB) {
-                    $translator->addResource('db', $domain . '.' . $locale . '.db', $locale, $domain);
-                }
+        foreach ($finder as $file) {
+            list($domain, $locale, $format) = explode('.', $file->getBasename(), 3);
+            $translator->addResource($format, $file, $locale, $domain);
+            if ($withDB) {
+                $translator->addResource('db', $domain . '.' . $locale . '.db', $locale, $domain);
             }
         }
     }
