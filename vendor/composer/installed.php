@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-main',
-    'version' => 'dev-main',
+    'pretty_version' => 'dev-develop',
+    'version' => 'dev-develop',
     'aliases' => 
     array (
     ),
-    'reference' => 'f1d611bdff1e0713625692dda18f3903b6e1b636',
+    'reference' => 'c56479cc1046c41e1e7f5faa76a0be718a341e3e',
     'name' => 'prestashop/prestashop',
   ),
   'versions' => 
@@ -283,12 +283,12 @@
     ),
     'friendsofphp/php-cs-fixer' => 
     array (
-      'pretty_version' => 'v2.17.2',
-      'version' => '2.17.2.0',
+      'pretty_version' => 'v2.17.3',
+      'version' => '2.17.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'aaee4f3d16a996fc0b570be0c69d3b80c909c507',
+      'reference' => 'bd32f5dd72cdfc7b53f54077f980e144bfa2f595',
     ),
     'friendsofsymfony/jsrouting-bundle' => 
     array (
@@ -418,12 +418,12 @@
     ),
     'johnkary/phpunit-speedtrap' => 
     array (
-      'pretty_version' => 'v3.2.0',
-      'version' => '3.2.0.0',
+      'pretty_version' => 'v3.3.0',
+      'version' => '3.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8c0e149b80c6e86c33315f05699512678655c158',
+      'reference' => '9ba81d42676da31366c85d3ff8c10a8352d02030',
     ),
     'league/tactician' => 
     array (
@@ -499,12 +499,12 @@
     ),
     'matthiasmullie/minify' => 
     array (
-      'pretty_version' => '1.3.63',
-      'version' => '1.3.63.0',
+      'pretty_version' => '1.3.65',
+      'version' => '1.3.65.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9ba1b459828adc13430f4dd6c49dae4950dc4117',
+      'reference' => '227f19062451c55a797e0cc667ef983834e6580c',
     ),
     'matthiasmullie/path-converter' => 
     array (
@@ -593,12 +593,12 @@
     ),
     'nikic/php-parser' => 
     array (
-      'pretty_version' => 'v4.10.3',
-      'version' => '4.10.3.0',
+      'pretty_version' => 'v4.10.4',
+      'version' => '4.10.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984',
+      'reference' => 'c6d052fc58cb876152f89f532b95a8d7907e7f0e',
     ),
     'ocramius/package-versions' => 
     array (
@@ -749,21 +749,21 @@
     ),
     'phpspec/prophecy' => 
     array (
-      'pretty_version' => '1.12.1',
-      'version' => '1.12.1.0',
+      'pretty_version' => '1.12.2',
+      'version' => '1.12.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8ce87516be71aae9b956f81906aaf0338e0d8a2d',
+      'reference' => '245710e971a030f42e08f4912863805570f23d39',
     ),
     'phpstan/phpstan' => 
     array (
-      'pretty_version' => '0.12.63',
-      'version' => '0.12.63.0',
+      'pretty_version' => '0.12.64',
+      'version' => '0.12.64.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c97ec4754bd53099a06c24847bd2870b99966b6a',
+      'reference' => '23eb1cb7ae125f45f1d0e48051bcf67a9a9b08aa',
     ),
     'phpunit/php-code-coverage' => 
     array (
@@ -929,12 +929,12 @@
     ),
     'prestashop/prestashop' => 
     array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
+      'pretty_version' => 'dev-develop',
+      'version' => 'dev-develop',
       'aliases' => 
       array (
       ),
-      'reference' => 'f1d611bdff1e0713625692dda18f3903b6e1b636',
+      'reference' => 'c56479cc1046c41e1e7f5faa76a0be718a341e3e',
     ),
     'prestashop/productcomments' => 
     array (
@@ -1837,12 +1837,12 @@
     ),
     'symfony/http-client' => 
     array (
-      'pretty_version' => 'v5.2.0',
-      'version' => '5.2.0.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5b9fc5d85a6cec73832ff170ccd468d97dd082d9',
+      'reference' => 'a77cbec69ea90dea509beef29b79748c0df33a83',
     ),
     'symfony/http-client-contracts' => 
     array (
@@ -1904,12 +1904,12 @@
     ),
     'symfony/mime' => 
     array (
-      'pretty_version' => 'v5.2.0',
-      'version' => '5.2.0.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '05f667e8fa029568964fd3bec6bc17765b853cc5',
+      'reference' => 'de97005aef7426ba008c46ba840fc301df577ada',
     ),
     'symfony/monolog-bridge' => 
     array (

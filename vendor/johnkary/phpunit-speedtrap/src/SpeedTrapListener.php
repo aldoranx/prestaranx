@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace JohnKary\PHPUnit\Listener;
 
 use PHPUnit\Framework\{TestListener, TestListenerDefaultImplementation, TestSuite, Test, TestCase};
+use PHPUnit\Util\Test as TestUtil;
 
 /**
  * A PHPUnit TestListener that exposes your slowest running tests by outputting
@@ -12,6 +13,17 @@ use PHPUnit\Framework\{TestListener, TestListenerDefaultImplementation, TestSuit
 class SpeedTrapListener implements TestListener
 {
     use TestListenerDefaultImplementation;
+
+    /**
+     * Slowness profiling enabled by default. Set to false to disable profiling
+     * and reporting.
+     *
+     * Use environment variable "PHPUNIT_SPEEDTRAP" set to value "disabled" to
+     * disable profiling.
+     *
+     * @var boolean
+     */
+    protected $enabled = true;
 
     /**
      * Internal tracking for test suites.
@@ -45,6 +57,8 @@ class SpeedTrapListener implements TestListener
 
     public function __construct(array $options = [])
     {
+        $this->enabled = getenv('PHPUNIT_SPEEDTRAP') === 'disabled' ? false : true;
+
         $this->loadOptions($options);
     }
 
@@ -56,6 +70,7 @@ class SpeedTrapListener implements TestListener
      */
     public function endTest(Test $test, float $time): void
     {
+        if (!$this->enabled) return;
         if (!$test instanceof TestCase) return;
 
         $timeInMilliseconds = $this->toMilliseconds($time);
@@ -73,6 +88,8 @@ class SpeedTrapListener implements TestListener
      */
     public function startTestSuite(TestSuite $suite): void
     {
+        if (!$this->enabled) return;
+
         $this->suites++;
     }
 
@@ -83,6 +100,8 @@ class SpeedTrapListener implements TestListener
      */
     public function endTestSuite(TestSuite $suite): void
     {
+        if (!$this->enabled) return;
+
         $this->suites--;
 
         if (0 === $this->suites && $this->hasSlowTests()) {
@@ -222,7 +241,10 @@ class SpeedTrapListener implements TestListener
      */
     protected function getSlowThreshold(TestCase $test): int
     {
-        $ann = $test->getAnnotations();
+        $ann = TestUtil::parseTestMethodAnnotations(
+            get_class($test),
+            $test->getName(false)
+        );
 
         return isset($ann['method']['slowThreshold'][0]) ? (int) $ann['method']['slowThreshold'][0] : $this->slowThreshold;
     }
