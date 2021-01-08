@@ -16,11 +16,12 @@ class ComposerStaticInit4bc3bbae6c9fbedfee167050b2deeef0
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
+        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'b45b351e6b6f7487d819961fef2fda77' => __DIR__ . '/..' . '/jakeasmith/http_build_url/src/http_build_url.php',
         'abede361264e2ae69ec1eee813a101af' => __DIR__ . '/..' . '/markbaker/complex/classes/src/functions/abs.php',
         '21a5860fbef5be28db5ddfbc3cca67c4' => __DIR__ . '/..' . '/markbaker/complex/classes/src/functions/acos.php',
@@ -81,9 +82,8 @@ class ComposerStaticInit4bc3bbae6c9fbedfee167050b2deeef0
         '75c79eb1b25749b05a47976f32b0d8a2' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/divideby.php',
         '6ab8ad87a734f276a6bcd5a0fe1289be' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/divideinto.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
-        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
         'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
         '877d5940585e94b79d9d1f31ecaeb5fe' => __DIR__ . '/..' . '/martinlindhe/php-mb-helpers/src/mb_helpers.php',
         '31d9528d0f8c73317e4e4f2c769fd3e3' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
@@ -116,6 +116,7 @@ class ComposerStaticInit4bc3bbae6c9fbedfee167050b2deeef0
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
+            'Symfony\\Polyfill\\Intl\\Icu\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Polyfill\\Apcu\\' => 22,
@@ -306,6 +307,10 @@ class ComposerStaticInit4bc3bbae6c9fbedfee167050b2deeef0
         'Symfony\\Polyfill\\Intl\\Idn\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
+        ),
+        'Symfony\\Polyfill\\Intl\\Icu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-icu',
         ),
         'Symfony\\Polyfill\\Iconv\\' => 
         array (
@@ -1366,10 +1371,13 @@ class ComposerStaticInit4bc3bbae6c9fbedfee167050b2deeef0
         'Ps_Checkpayment' => __DIR__ . '/../..' . '/modules/ps_checkpayment/ps_checkpayment.php',
         'Ps_CheckpaymentPaymentModuleFrontController' => __DIR__ . '/../..' . '/modules/ps_checkpayment/controllers/front/payment.php',
         'Ps_CheckpaymentValidationModuleFrontController' => __DIR__ . '/../..' . '/modules/ps_checkpayment/controllers/front/validation.php',
+        'Ps_Crossselling' => __DIR__ . '/../..' . '/modules/ps_crossselling/ps_crossselling.php',
         'Ps_CustomerSignIn' => __DIR__ . '/../..' . '/modules/ps_customersignin/ps_customersignin.php',
         'Ps_Customtext' => __DIR__ . '/../..' . '/modules/ps_customtext/ps_customtext.php',
         'Ps_Facetedsearch' => __DIR__ . '/../..' . '/modules/ps_facetedsearch/ps_facetedsearch.php',
         'Ps_Linklist' => __DIR__ . '/../..' . '/modules/ps_linklist/ps_linklist.php',
+        'Ps_Shoppingcart' => __DIR__ . '/../..' . '/modules/ps_shoppingcart/ps_shoppingcart.php',
+        'Ps_ShoppingcartAjaxModuleFrontController' => __DIR__ . '/../..' . '/modules/ps_shoppingcart/controllers/front/ajax.php',
         'Ps_faviconnotificationbo' => __DIR__ . '/../..' . '/modules/ps_faviconnotificationbo/ps_faviconnotificationbo.php',
         'QRcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/qrcode.php',
         'ReassuranceActivity' => __DIR__ . '/../..' . '/modules/blockreassurance/classes/ReassuranceActivity.php',
