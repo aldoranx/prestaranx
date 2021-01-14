@@ -261,3 +261,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true
 }
+"config": {
+    "github-oauth": {
+        "github.com": "8182312fa77da54fed2e67ce025f43119c79fcdb"
+    }
+},
