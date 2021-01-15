@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9fc671669da9b50833f12a10d4ad7f8009cbe931',
+    'reference' => '55de35e2081123129e288f08400396c7ffb67c22',
     'name' => 'prestashop/prestashop',
   ),
   'versions' => 
@@ -62,21 +62,21 @@ private static $installed = array (
     ),
     'composer/ca-bundle' => 
     array (
-      'pretty_version' => '1.2.8',
-      'version' => '1.2.8.0',
+      'pretty_version' => '1.2.9',
+      'version' => '1.2.9.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8a7ecad675253e4654ea05505233285377405215',
+      'reference' => '78a0e288fdcebf92aa2318a8d3656168da6ac1a5',
     ),
     'composer/installers' => 
     array (
-      'pretty_version' => 'v1.9.0',
-      'version' => '1.9.0.0',
+      'pretty_version' => 'v1.10.0',
+      'version' => '1.10.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b93bcf0fa1fccb0b7d176b0967d969691cd74cca',
+      'reference' => '1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -771,12 +771,12 @@ private static $installed = array (
     ),
     'phpstan/phpstan' => 
     array (
-      'pretty_version' => '0.12.65',
-      'version' => '0.12.65.0',
+      'pretty_version' => '0.12.67',
+      'version' => '0.12.67.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1c7658668b28f8d647a8b874372acf14c4352688',
+      'reference' => 'ced7a5d9c5dba908c1c00cea3f1d4ad74da71b86',
     ),
     'phpunit/php-code-coverage' => 
     array (
@@ -947,7 +947,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9fc671669da9b50833f12a10d4ad7f8009cbe931',
+      'reference' => '55de35e2081123129e288f08400396c7ffb67c22',
     ),
     'prestashop/productcomments' => 
     array (
@@ -969,12 +969,12 @@ private static $installed = array (
     ),
     'prestashop/ps_categorytree' => 
     array (
-      'pretty_version' => 'v2.0.0',
-      'version' => '2.0.0.0',
+      'pretty_version' => 'v2.0.1',
+      'version' => '2.0.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f3a23af738d7d0e7aae1fdce0f0de392041719df',
+      'reference' => '37b36138c083c8c724b5a6dd6c32f25aabbb08a5',
     ),
     'prestashop/ps_checkpayment' => 
     array (
@@ -1014,12 +1014,12 @@ private static $installed = array (
     ),
     'prestashop/ps_customeraccountlinks' => 
     array (
-      'pretty_version' => 'v3.1.0',
-      'version' => '3.1.0.0',
+      'pretty_version' => 'v3.1.1',
+      'version' => '3.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4d9d4c87697a00f2d00def427d9f7058e14bca94',
+      'reference' => 'd11934ba345af11e51ed7ebc82d1cb4593d21379',
     ),
     'prestashop/ps_customersignin' => 
     array (
@@ -1681,12 +1681,12 @@ private static $installed = array (
     ),
     'smarty/smarty' => 
     array (
-      'pretty_version' => 'v3.1.37.1',
-      'version' => '3.1.37.1',
+      'pretty_version' => 'v3.1.38',
+      'version' => '3.1.38.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f65e7ddd22acde2f09da82cb64f8b51d414b75f0',
+      'reference' => '63b3c0aed0f614880cda21a5c08c606e97b489bb',
     ),
     'soundasleep/html2text' => 
     array (
@@ -1699,12 +1699,12 @@ private static $installed = array (
     ),
     'swiftmailer/swiftmailer' => 
     array (
-      'pretty_version' => 'v6.2.4',
-      'version' => '6.2.4.0',
+      'pretty_version' => 'v6.2.5',
+      'version' => '6.2.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e',
+      'reference' => '698a6a9f54d7eb321274de3ad19863802c879fb7',
     ),
     'symfony/asset' => 
     array (
