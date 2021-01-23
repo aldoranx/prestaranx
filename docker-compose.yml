@@ -1,5 +1,5 @@
-version: '2.1'
-
+version: '3.7'
+  
 volumes:
   db-data:
   vendor:
@@ -33,4 +33,7 @@ services:
     volumes:
       - ./:/var/www/html/:delegated
       - vendor:/var/www/html/vendor
-      - var:/var/www/html/var
+      - var:/var/www/html/var"
+networks:
+  default:
+      name: prestashop-net

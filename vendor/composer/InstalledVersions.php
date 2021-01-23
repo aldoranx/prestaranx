@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '55de35e2081123129e288f08400396c7ffb67c22',
+    'reference' => '5c1012790bab5cbe1b75914da631613d17afe6e1',
     'name' => 'prestashop/prestashop',
   ),
   'versions' => 
@@ -296,12 +296,12 @@ private static $installed = array (
     ),
     'friendsofphp/php-cs-fixer' => 
     array (
-      'pretty_version' => 'v2.17.3',
-      'version' => '2.17.3.0',
+      'pretty_version' => 'v2.18.1',
+      'version' => '2.18.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bd32f5dd72cdfc7b53f54077f980e144bfa2f595',
+      'reference' => 'c68ff6231adb276857761e43b7ed082f164dce0b',
     ),
     'friendsofsymfony/jsrouting-bundle' => 
     array (
@@ -494,12 +494,12 @@ private static $installed = array (
     ),
     'markbaker/matrix' => 
     array (
-      'pretty_version' => '2.0.0',
-      'version' => '2.0.0.0',
+      'pretty_version' => '2.1.1',
+      'version' => '2.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9567d9c4c519fbe40de01dbd1e4469dbbb66f46a',
+      'reference' => '35a2d1a919a1de732402f694925168c53c17c838',
     ),
     'martinlindhe/php-mb-helpers' => 
     array (
@@ -631,12 +631,12 @@ private static $installed = array (
     ),
     'pear/archive_tar' => 
     array (
-      'pretty_version' => '1.4.11',
-      'version' => '1.4.11.0',
+      'pretty_version' => '1.4.12',
+      'version' => '1.4.12.0',
       'aliases' => 
       array (
       ),
-      'reference' => '17d355cb7d3c4ff08e5729f29cd7660145208d9d',
+      'reference' => '19bb8e95490d3e3ad92fcac95500ca80bdcc7495',
     ),
     'pear/console_getopt' => 
     array (
@@ -771,12 +771,12 @@ private static $installed = array (
     ),
     'phpstan/phpstan' => 
     array (
-      'pretty_version' => '0.12.67',
-      'version' => '0.12.67.0',
+      'pretty_version' => '0.12.68',
+      'version' => '0.12.68.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ced7a5d9c5dba908c1c00cea3f1d4ad74da71b86',
+      'reference' => 'ddbe01af0706ee094c3f1ce9730b35aebb508d3d',
     ),
     'phpunit/php-code-coverage' => 
     array (
@@ -947,7 +947,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '55de35e2081123129e288f08400396c7ffb67c22',
+      'reference' => '5c1012790bab5cbe1b75914da631613d17afe6e1',
     ),
     'prestashop/productcomments' => 
     array (
@@ -1122,12 +1122,12 @@ private static $installed = array (
     ),
     'prestashop/ps_searchbar' => 
     array (
-      'pretty_version' => 'v2.0.1',
-      'version' => '2.0.1.0',
+      'pretty_version' => 'v2.1.0',
+      'version' => '2.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ae165e9ca469926df0b07181bf8ecee431f82070',
+      'reference' => '61bff70e5ed4e3f0df61419446fe5fc7a5cac8bf',
     ),
     'prestashop/ps_sharebuttons' => 
     array (
