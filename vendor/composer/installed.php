@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5c1012790bab5cbe1b75914da631613d17afe6e1',
+    'reference' => 'c88fff6fb44268ef847217b9c8ec68756ad7c69b',
     'name' => 'prestashop/prestashop',
   ),
   'versions' => 
@@ -934,7 +934,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5c1012790bab5cbe1b75914da631613d17afe6e1',
+      'reference' => 'c88fff6fb44268ef847217b9c8ec68756ad7c69b',
     ),
     'prestashop/productcomments' => 
     array (

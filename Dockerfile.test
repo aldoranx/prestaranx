@@ -1,0 +1,23 @@
+FROM php:7.2-buster
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+# php ram limit
+ENV COMPOSER_MEMORY_LIMIT=-1
+# SYS DEP
+RUN apt-get update
+RUN apt-get -y install apt-transport-https ca-certificates curl libxml2 zlib1g-dev libpng-dev libicu-dev g++ 
+
+# PHP EXTENSIONS
+RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install intl
+RUN docker-php-ext-install zip
+RUN docker-php-ext-install gd
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install fileinfo
+
+# COMPOSER
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+COPY . /var/test
+WORKDIR /var/test

@@ -236,7 +236,7 @@ final class Versions
   'symfony/phpunit-bridge' => 'v3.4.47@120273ad5d03a8deee08ca9260e2598f288f2bac',
   'theseer/tokenizer' => '1.2.0@75a63c33a8577608444246075ea0af0d052e452a',
   'webmozart/assert' => '1.9.1@bafc69caeb4d49c39fd0779086c03a3738cbb389',
-  'prestashop/prestashop' => 'dev-develop@5c1012790bab5cbe1b75914da631613d17afe6e1',
+  'prestashop/prestashop' => 'dev-develop@c88fff6fb44268ef847217b9c8ec68756ad7c69b',
 );
 
     private function __construct()
